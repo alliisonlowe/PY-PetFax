@@ -1,0 +1,22 @@
+{% extends "index-base.html" %}
+
+{% block title %} {{pet.pet_name}} {% endblock%}
+
+{% block body %}
+<div class="container">
+    <h1>{{pet.pet_name}}</h1>
+    <div class="callout">
+        <span class="pet-fact-title">
+            Did you know?
+        </span>
+        <br />
+        {{pet.pet_fact}}
+    </div>
+</div>
+<div class="pets-container">
+    <div class="show-pet">
+        <img src="{{pet.pet_photo}}" alt="Photo of {{pet.pet_name}}">
+    </div>
+</div>
+<a href="/pets"> &lt;&lt; Go back</a>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "index-base.html" %}
+
+{% block title %} We &lt;3 to fax pets! {% endblock%}
+
+{% block body %}
+<div class="container">
+    <h1>Pet Facts!</h1>
+    <div class="callout">
+        Welcome to PetFax! If you want to fax your pet somewhere we got you covered!
+    </div>
+
+    <div class="pets-container">
+        {% for pet in pets %}
+        <div class="pet">
+            <h2>{{pet.pet_name}}</h2>
+            <img src="{{pet.pet_photo}}" alt="Picture of {{pet.pet_name}}">
+            <a href="/pets/{{pet.pet_id}}">Learn more about {{pet.pet_name}}</a>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="callout">
+        We want to know how you want your pets faxed.
+        <a href="/facts/new">Submit some facts!</a>
+    </div>
+</div>
+{% endblock %}
