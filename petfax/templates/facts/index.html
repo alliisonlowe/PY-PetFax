@@ -3,14 +3,22 @@
 {% block title %} Facts {% endblock%}
 
 {% block body %}
-    <div class="container">
-        <h1>Pet Facts</h1>
-        <div class="callout">
-            These facts about faxed pets were added by users.
-        </div>
-        <div class="facts-conatiner">
-            Lists of facts
-        </div>
-        <a href="/pets">&lt;&lt; Go back</a>
+<div class="container">
+    <h1>Pet Facts</h1>
+    <div class="callout">
+        These facts about faxed pets were added by users.
     </div>
+    <div class="facts-conatiner">
+        {% for fact in facts %}
+        <h4>Submitted by {{ fact.submitter }}</h4>
+        <p class="fact">
+            {{ fact.fact }}
+        </p>
+        {% endfor %}
+    </div>
+</div>
+<div class="links">
+    <a href="/pets">&lt;&lt; Go back</a>
+</div>
+
 {% endblock %}

@@ -1,0 +1,35 @@
+{% extends "index-base.html" %}
+
+{% block title %} New Pet {% endblock%}
+
+{% block body %}
+<div class="container">
+    <h1>Add a Pet to Fax</h1>
+    <div class="callout">
+        Pets love being faxed! Go ahead an add one.
+    </div>
+    <div class="facts-container">
+        <form method="POST" action="/pets">
+            <label for="petName">
+                <h2>Pet Name</h2>
+            </label>
+            <input type="text" name="petName">
+            <br />
+            <label for="petPhoto">
+                <h2>Pet Photo</h2>
+            </label>
+            <input type="text" name="petPhoto">
+            <br />
+            <label for="petFact">
+                <h2>Pet Fact</h2>
+            </label>
+            <textarea name="petFact">
+
+            </textarea>
+            <br />
+            <input type="submit" value="Add Your Pet!">
+        </form>
+    </div>
+    <a href="/pets">&lt;&lt; Go back!</a>
+</div>
+{% endblock %}

@@ -9,7 +9,7 @@
         If you have experience faxing small animals tell us about it!
     </div>
     <div class="facts-container">
-        <form method="POST">
+        <form method="POST" action="/facts">
             <label for="submitter">
                 <h2>Submitter</h2>
             </label>
@@ -18,11 +18,11 @@
             <label for="fact">
                 <h2>Fact</h2>
             </label>
-            <textarea name="fact" id="" cols="30" rows="10">
+            <textarea name="fact">
 
                 </textarea>
             <br />
-            <input type="button" value="Submit a Fact!">
+            <input type="submit" value="Submit a Fact!">
         </form>
     </div>
     <a href="/pets">&lt;&lt; Go back!</a>

@@ -9,13 +9,17 @@
         Welcome to PetFax! If you want to fax your pet somewhere we got you covered!
     </div>
 
+    <div class="add-pet-container">
+        <a href="/pets/new" class="add-pet">Add a Pet!</a>
+    </div>
+
     <div class="pets-container">
         {% for pet in pets %}
         <div class="pet">
             <h2>{{pet.pet_name}}</h2>
             <img src="{{pet.pet_photo}}" alt="Picture of {{pet.pet_name}}">
             
-            <a href="/pets/{{pet.pet_id}}">Learn more about {{pet.pet_name}}</a>
+            <a id="learn-more" href="/pets/{{pet.pet_id}}">Learn more about {{pet.pet_name}}</a>
         </div>
         {% endfor %}
     </div>
