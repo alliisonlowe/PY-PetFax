@@ -1,3 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Single+Day&family=Titan+One&display=swap');
+
+:root {
+    --header-font: 'Titan One', impact;
+    --accent-font: 'Single Day', verdana;
+    --body-font: 'Amatic SC', helvetica;
+    
+    --light-accent:#DD9787;
+    --main-accent:#74D3AE;
+    --second-accent:#A6C48A;
+    --tertiary-accent: #678D58;
+
+    --main-background:#F6E7CB;
+}
+
 body{
-    background-color: tan;
+    background-color: var(--main-background);
+    font-family: var(--body-font);
+}
+
+.container{
+    width: 50%;
+    max-height: 80%;
+    margin: 2em auto;
+    padding: 1em 3em 3em 3em;
+    border-radius: 1em;
+    background-color: var(--light-accent);
+    box-shadow: 2px 2px #ddd;
+}
+
+.pets-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.pet{
+    vertical-align: top;
+    display: inline-block;
+    text-align: left;
+    width: 120px;
+}
+
+img{
+    width: auto;
+    height: 300px;
+}
+
+#learn-more{
+    display: block;
 }
