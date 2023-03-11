@@ -27,6 +27,14 @@ def index():
 
     return render_template('pets/index.html', pets=results)
 
+@bp.route("/delete/<int:id>")
+def delete(id):
+    delete_pet= models.Pet.query.get(id)
+    models.db.session.delete(delete_pet)
+    models.db.session.commit()
+
+    return redirect('/pets')
+
 @bp.route("/<int:id>")
 def show(id):
     pet = models.Pet.query.get(id)

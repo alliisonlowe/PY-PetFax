@@ -17,6 +17,9 @@
     <div class="show-pet">
         <img src="{{pet.pet_photo}}" alt="Photo of {{pet.pet_name}}">
     </div>
+    <div class="links">
+        <a href="/pets/delete/{{ pet.pet_id }}">Delete</a>
+    </div>
 </div>
 <a href="/pets"> &lt;&lt; Go back</a>
 {% endblock %}
